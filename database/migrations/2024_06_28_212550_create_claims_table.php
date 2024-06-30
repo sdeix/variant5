@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('releasedate')->nullable();
             $table->string('model')->nullable();
             $table->bigInteger('client')->unsigned();
+            $table->boolean('active')->default(false);
 
             
             $table->foreign('client')->references('id')->on('clients')->onDelete('cascade');
